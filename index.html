@@ -22,7 +22,14 @@ body {
 <body>
   <iframe id="twitch-embed" src="https://player.twitch.tv/?channel=esamarathon&parent=fusowasedr09.github.io" frameborder="0" scrolling="no" height="100%" width="80%"></iframe>
   <iframe frameborder="0" scrolling="no" id="jp-restream-chat-embed" src="https://www.twitch.tv/embed/japanese_restream/chat?parent=fusowasedr09.github.io&darkpopout"></iframe>
-  <button class="nightmode" type="button">night</button>
+  <button class="nightmode" type="button">Dark</button>
+  <button class="reload" type="button" onclick="reloadViewer()">再読み込み</button>
   <a href="./help.html">困ったときは</a>
+  
+  <script type="text/javascript">
+    function reloadViewer(){
+      document.getElementById("twitch-embed")[0].contentDocument.location.reload(true);
+      }
+  </script>
 </body>
 </html>
